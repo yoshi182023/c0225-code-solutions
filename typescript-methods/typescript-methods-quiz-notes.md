@@ -6,13 +6,19 @@ Answer the following questions in the provided markdown file before turning in t
 
 - Why do we log things to the console?
   Print to the console
+  output the result value
+
 - What is a method?
+  a function that is a property belongs to an object
 
 - How is a method different from any other function?
+  method belongs to object.
+  normal function is a standalone function.
 
 - How do you remove the last element from an array?
-
+  pop method
 - How do you round a number down to the nearest integer?
+  Math.floor() --> always round down
 
 - How do you generate a random number?
   Math.random(): Returns a random number between 0 and 1

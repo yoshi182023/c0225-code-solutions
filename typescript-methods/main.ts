@@ -4,11 +4,14 @@ const heroes: string[] = ['Spider-Man', 'Iron Man', 'Black Widow', 'Thor'];
 console.log(heroes);
 // Call the random() method of the Math object and
 // assign its return value to a new variable named randomNumber.
+
 let randomNumber: number = Math.random();
 console.log('randomNumber before:', randomNumber);
 // Multiply your random number by the length property of your heroes object
 // and assign the result back to the randomNumber variable.
+
 randomNumber = randomNumber * heroes.length;
+
 console.log('randomNumber after:', randomNumber);
 // Call the floor() method of the Math object and pass in randomNumber as an argument.
 // Assign its return value to a new variable named randomIndex.
