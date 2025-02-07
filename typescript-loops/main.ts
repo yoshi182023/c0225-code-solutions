@@ -27,8 +27,9 @@ const getNumbersToTe = (): number[] => {
 };
 // returns the numbers array after the loop terminates
 console.log('getNumbersToTe', getNumbersToTe());
+
 const getEvenNumbersToTwenty = (): number[] => {
-  const evenNumbers: Array<number> = [];
+  const evenNumbers = [];
   let currentNumber = 2;
   // uses a while loop to loop through the numbers 2 to 20 and for each of them:
   while (currentNumber <= 20) {
@@ -60,7 +61,7 @@ const repeatWord = (word: string, times: number): string => {
 };
 console.log('repeat word:', repeatWord('javascript', 30));
 
-const logEachCharacter = (str: any): any => {
+const logEachCharacter = (str: any): void => {
   // use a for loop that assigns 0 to a new variable named i in its initialization expression
   for (let i = 0; i < str.length; i++) {
     console.log('value of str', str[i]);
@@ -90,6 +91,7 @@ const sumArray = (numbers: Array<number>): number => {
   return sum;
 };
 console.log('sumArray', sumArray([4, 7, 1]));
+
 // Define a function named reverseString with one parameter:
 // str (which will be a string). This function should:
 function reverseString(str: string): string {
@@ -114,6 +116,7 @@ console.log('test mia Gong:', reverseString('Mia Gong'));
 // we need to utilize the record utility type.
 // here is how you will need to type your parameters for the next couple functions.
 // Define a function named getKeys with one parameter: obj. This function should:
+
 function getKeys(obj: Record<string, unknown>): string[] {
   const keys: string[] = [];
   // use a for...in loop to get each property key of the input obj and push it into the keys array
@@ -127,3 +130,10 @@ function getKeys(obj: Record<string, unknown>): string[] {
 // NOTE: You will need to utilize the Record utility type to complete this.
 
 // NOTE: This function should not use the Object.keys() or Object.entries() methods.
+const getValues = (obj: Record<string, unknown>): unknown => {
+  const values = [];
+  for (const key in obj) {
+    values.push(obj[key]);
+  }
+  return values;
+};
