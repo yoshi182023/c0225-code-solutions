@@ -7,37 +7,58 @@
   </head>
   <body>
     <h1>Coding Form!</h1>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required />
-    <label for="reason">Why Coding?</label>
-    <select id="country" name="country">
-      <option value="">Select an option</option>
-      <option value="Cool">Because it's cool</option>
-      <option value="fun">Because it's fun</option>
-      <option value="fun">Because it's useful</option>
-    </select>
-    <fieldset>
-      <label for="comments">Favorite Language (choose one):</label>
+    <div>
+      <!-- for "attribute  has to match the "id or has to be inside the label,if you are work with a form, you have to put the id -->
 
-      <label> <input type="radio" name="HTML" value="HTML" /> HTML</label>
-      <label><input type="radio" name="CSS" value="CSS" /> CSS</label>
-      <label
-        ><input type="radio" name="Javascript" value="Javascript" />
-        Javascript</label
-      >
-    </fieldset>
-    <label for="comments">Sign up for more information?</label>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+    <div>
+      <label for="why-coding" id="why-coding">Why Coding?</label>
+    </div>
+    <div>
+      <select id="country" name="country">
+        <option value="">Select an option</option>
+        <option value="Cool">Because it's cool</option>
+        <option value="fun">Because it's fun</option>
+        <option value="fun">Because it's useful</option>
+      </select>
+    </div>
+    <div>
+      <fieldset>
+        <div>
+          <label for="comments">Favorite Language (choose one):</label>
+        </div>
 
-    <label>
-      <input type="checkbox" name="interest" value="updates" /> Sign me up!
-    </label>
+        <label>
+          <input type="radio" name="favoriteLanguage" value="HTML" />
+          HTML</label
+        >
+        <label
+          ><input type="radio" name="favoriteLanguage" value="CSS" /> CSS</label
+        >
+        <label
+          ><input type="radio" name="favoriteLanguage" value="Javascript" />
+          Javascript</label
+        >
+      </fieldset>
+    </div>
+    <div>
+      <label for="comments">Sign up for more information?</label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" name="interest" value="updates" /> Sign me up!
+      </label>
+    </div>
 
     <form action="https://example.com/register" method="post">
-      <label for="comments">Comments:</label>
+      <div><label for="comments">Comments:</label></div>
 
       <textarea id="comments" name="comments"></textarea>
-
-      <button type="submit">Submit</button>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
     </form>
   </body>
 </html>
