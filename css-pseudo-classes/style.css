@@ -1,0 +1,16 @@
+th {
+  background-color: grey;
+  margin-bottom: 12px;
+}
+
+tr:nth-child(odd) {
+  background-color: #cda9a9;
+}
+
+button:hover {
+  background-color: yellow;
+}
+
+button:active {
+  background-color: blue;
+}
