@@ -1,5 +1,5 @@
 function handleClick(event: Event): void {
-  console.log('botton clicked');
+  console.log('button clicked');
   console.log('event:', event);
   console.log('event.target', event.target);
 }
