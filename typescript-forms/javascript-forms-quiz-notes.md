@@ -25,14 +25,16 @@ Answer the following questions in the provided markdown file before turning in t
   By default, when a form is submitted, the page is refreshed or navigated to the form's action URL.
 
 - What property of a form element object contains all of the form's controls.
-  Every <form> element has an elements property that lists all the form controls that are contained within the <form> element.You can access a particular form control element either by using the element's name or id attribute, as well as the index that it appears within the HTMLFormControlsCollection.
+  **element property**
 
 - What property of a form control object gets and sets its value?
   The value property of a form control object gets and sets its value.
 
 - What is one risk of writing a lot of code without checking to see if it works so far?
   One risk is that errors can accumulate, making it harder to debug and identify where the problem originated.
+
 - What is an advantage of having your console open when writing a JavaScript program?
+
   An advantage is that you can immediately see errors, log outputs, and debug issues in real-time as you write and test your code.
 
 ## Notes
