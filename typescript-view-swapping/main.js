@@ -7,32 +7,30 @@ console.log('Tab Container:', $tabCon);
 console.log('Tabs:', tabs);
 console.log('Views:', views);
 if ($tabCon) {
-  // An event listener must be attached to the TabContainer element.
   $tabCon.addEventListener('click', (event) => {
-    // Store the event.target to a variable
     const $eventTarget = event.target;
     console.log('event target', $eventTarget);
-    // Verify that a .tab element was clicked before proceeding with
-    // any further functionality
     if ($eventTarget.matches('.tab')) {
       for (let i = 0; i < tabs.length; i++) {
         if (tabs[i] === $eventTarget) {
           console.log('tab i ', tabs[i]);
-          tabs[i].classList.add('active');
+          tabs[i].className = 'tab active';
         } else {
           tabs[i].classList.remove('active');
         }
       }
+      const targetView = $eventTarget.dataset.view;
+      console.log($eventTarget.dataset.view);
+      console.log('targetView', targetView);
+      // Update the current .view element's class name to either show or hide its content
+      views.forEach((view) => {
+        if (view.getAttribute('data-view') !== targetView) {
+          view.className = 'view hidden';
+          console.log('view.className', view.className);
+        } else {
+          view.className = 'view';
+        }
+      });
     }
-    const targetView = $eventTarget.getAttribute('data-view');
-    console.log('targetview', targetView);
-    // Update the current .view element's class name to either show or hide its content
-    views.forEach((view) => {
-      if (view.getAttribute('data-view') === targetView) {
-        view.classList.remove('hidden');
-      } else {
-        view.classList.add('hidden');
-      }
-    });
   });
 }

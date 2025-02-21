@@ -10,27 +10,27 @@ if ($tabCon) {
   $tabCon.addEventListener('click', (event: Event) => {
     const $eventTarget = event.target as HTMLDivElement;
     console.log('event target', $eventTarget);
-
     if ($eventTarget.matches('.tab')) {
       for (let i = 0; i < tabs.length; i++) {
         if (tabs[i] === $eventTarget) {
           console.log('tab i ', tabs[i]);
-          tabs[i].classList.add('active');
+          tabs[i].className = 'tab active';
         } else {
           tabs[i].classList.remove('active');
         }
       }
+      const targetView = $eventTarget.dataset.view;
+      console.log($eventTarget.dataset.view);
+      console.log('targetView', targetView);
+      // Update the current .view element's class name to either show or hide its content
+      views.forEach((view) => {
+        if (view.getAttribute('data-view') !== targetView) {
+          view.className = 'view hidden';
+          console.log('view.className', view.className);
+        } else {
+          view.className = 'view';
+        }
+      });
     }
-    const targetView = $eventTarget.dataset.view;
-    console.log('targetView', targetView);
-    // Update the current .view element's class name to either show or hide its content
-
-    views.forEach((view) => {
-      if (view.getAttribute('data-view') !== targetView) {
-        view.className = 'view hidden';
-      } else {
-        view.className = 'view';
-      }
-    });
   });
 }
