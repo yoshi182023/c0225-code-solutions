@@ -5,9 +5,10 @@
 Answer the following questions in the provided markdown file before turning in this exercise:
 
 - What is the `event.target`?
-
+  whoever the element cause the event to occur
 - What is the effect of setting an element to `display: none`?
-  hide
+  visible hide,remove from the document flow.
+
 - What does the `element.matches()` method take as an argument and what does it return?
   The matches method returns a boolean value - true if the element would be selected by the specified selector string, and false if it wouldn't.
 - How can you retrieve the value of an element's attribute?
