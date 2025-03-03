@@ -8,4 +8,4 @@ function updateHeading() {
     heading.textContent = 'Hello There';
   }
 }
-setTimeout(updateHeading, 2000);
+setTimeout(updateHeading, 200);
