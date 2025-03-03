@@ -17,6 +17,7 @@ Answer the following questions in the provided markdown file before turning in t
   **If the delay parameter is omitted, setTimeout() uses a default delay of 0 milliseconds.**
 
 - What do `setTimeout()` and `setInterval()` return?
+  void
 
 ## Notes
 
