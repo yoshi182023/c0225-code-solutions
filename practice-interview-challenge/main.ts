@@ -1,13 +1,13 @@
-interface RangeReport {
+interface Range {
   total: number;
-  odds: number[];
-  evens: number[];
-  range: number[];
+  odds: Array<number>;
+  evens: Array<number>;
+  range: Array<number>;
   average: number;
 }
 
-const getRangeReport = (start: number, end: number): RangeReport => {
-  const result: RangeReport = {
+const getRangeReport = (start: number, end: number): Range => {
+  const result: Range = {
     total: 0,
     odds: [],
     evens: [],
@@ -24,8 +24,8 @@ const getRangeReport = (start: number, end: number): RangeReport => {
       result.odds.push(num);
     }
   }
-
   result.average = (start + end) / 2;
+
   return result;
 };
 
