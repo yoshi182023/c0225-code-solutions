@@ -9,4 +9,4 @@ function updateHeading(): void {
   }
 }
 
-setTimeout(updateHeading, 2000);
+setTimeout(updateHeading, 200);
