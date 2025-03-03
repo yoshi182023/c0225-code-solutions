@@ -1,6 +1,5 @@
 'use strict';
 const getRangeReport = (start, end) => {
-  //  total - the sum of all integers from start to end.
   const result = {
     total: 0,
     odds: [],
@@ -17,8 +16,7 @@ const getRangeReport = (start, end) => {
       result.odds.push(num);
     }
   }
-  const average = (start + end) / 2;
-  result.average.push(average);
+  result.average = (start + end) / 2;
   return result;
 };
 console.log(getRangeReport(1, 5));
