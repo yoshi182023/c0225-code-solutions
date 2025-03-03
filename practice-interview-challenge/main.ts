@@ -30,3 +30,4 @@ const getRangeReport = (start: number, end: number): Range => {
 };
 
 console.log(getRangeReport(1, 5));
+console.log(getRangeReport(1, 10));
