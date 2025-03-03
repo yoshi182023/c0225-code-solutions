@@ -3,10 +3,10 @@
 //  Here is an example. I
 
 function updateHeading(): void {
-  const heading = document.getElementById('message');
+  const heading = document.querySelector('h1.message');
   if (heading) {
     heading.textContent = 'Hello There';
   }
 }
 
-setTimeout(updateHeading, 200);
+setTimeout(updateHeading, 2000);
