@@ -1,4 +1,7 @@
 // 获取所有轮播项（图片）
+// 初始化：启动自动切换定时器
+startAutoSlide();
+
 const slides: HTMLCollectionOf<Element> =
   document.getElementsByClassName('carousel-item');
 console.log(slides);
@@ -17,6 +20,7 @@ console.log('dots', dots);
 let position: number = 0;
 // 获取轮播项的总数
 const numberOfSlides: number = slides.length;
+let autoSlideInterval: number;
 // 隐藏所有轮播项的函数
 function hideAllSlides(): void {
   // 遍历所有轮播项
@@ -85,9 +89,10 @@ const handleDotClick = (index: number) => (): void => {
 };
 // 启动自动切换定时器
 function startAutoSlide(): void {
-  autoSlideInterval = window.setInterval(handleMoveToNextSlide, 3000); // 3 秒切换一次
+  autoSlideInterval = window.setInterval(handleMoveToNextSlide, 300); // 3 秒切换一次
 }
 // 重置自动切换定时器
+
 function resetAutoSlideTimer(): void {
   // 清除之前的定时器
   clearInterval(autoSlideInterval);
