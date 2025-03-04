@@ -10,7 +10,7 @@ Answer the following questions in the provided markdown file before turning in t
   Logical OR (||) **Evaluates expr2 only if expr1 is falsy.**
 
 - What is "short-circuit evaluation" and how does it apply to `&&` and `||`?
-
+  **moving from left to right** expressions are evaluated until the result can be determind. no further expressions are evaluated.
 - What is the `??` (nullish coalescing) operator and how does it differ from `||`?
   **handle cases where variables might be null or undefined,** providing a reliable way to set default values without the pitfalls of logical OR with falsy values like 0 or ''.
 
@@ -24,9 +24,12 @@ Answer the following questions in the provided markdown file before turning in t
   **This will be used to clone or merge objects and arrays, which is extremely useful in state management scenarios**
 
 - What data types can be spread into an array? Into an object?
-  [...iterableObj, newElement] for arrays or {...obj, newProp: value} for objects.
+  [...iterableObj, newElement] anything iterable for arrays or {...obj, newProp: value} for objects.
 
 - How does spread syntax differ from rest syntax?
+  (...args) take them into one --> rest
+
+  [100,...this is spread]
 
 ## Notes
 
