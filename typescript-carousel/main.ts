@@ -12,6 +12,7 @@ const prevButton: HTMLElement | null = document.getElementById(
 );
 // 获取所有指示点（小圆点）
 const dots: HTMLCollectionOf<Element> = document.getElementsByClassName('dot');
+console.log('dots', dots);
 // 初始化当前显示的轮播项位置
 let position: number = 0;
 // 获取轮播项的总数
@@ -26,7 +27,6 @@ function hideAllSlides(): void {
     slide.classList.add('carousel-item-hidden');
   }
 }
-
 // 处理切换到下一张轮播项的函数
 const handleMoveToNextSlide = (): void => {
   hideAllSlides();
@@ -38,7 +38,6 @@ const handleMoveToNextSlide = (): void => {
   }
   // 让当前轮播项可见
   slides[position].classList.add('carousel-item-visible');
-
   // 更新指示点，表示当前轮播项
   updateDots(position);
 };
@@ -55,7 +54,6 @@ const handleMoveToPrevSlide = (): void => {
   }
   // 让当前轮播项可见
   slides[position].classList.add('carousel-item-visible');
-
   // 更新指示点，表示当前轮播项
   updateDots(position);
 };
@@ -82,8 +80,20 @@ const handleDotClick = (index: number) => (): void => {
   position = index; // 跳转到对应的轮播项
   slides[position].classList.add('carousel-item-visible');
   updateDots(position); // 更新指示点状态
+  // 重置自动切换定时器
+  resetAutoSlideTimer();
 };
-
+// 启动自动切换定时器
+function startAutoSlide(): void {
+  autoSlideInterval = window.setInterval(handleMoveToNextSlide, 3000); // 3 秒切换一次
+}
+// 重置自动切换定时器
+function resetAutoSlideTimer(): void {
+  // 清除之前的定时器
+  clearInterval(autoSlideInterval);
+  // 启动新的定时器
+  startAutoSlide();
+}
 // 为“下一个”按钮添加点击事件监听器
 if (nextButton) {
   nextButton.addEventListener('click', handleMoveToNextSlide);
