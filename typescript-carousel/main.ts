@@ -1,10 +1,12 @@
-// 获取所有轮播项（图片）
-// 初始化：启动自动切换定时器
-startAutoSlide();
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('脚本加载完成');
+  startAutoSlide();
+});
+let autoSlideInterval: number | undefined;
 
 const slides: HTMLCollectionOf<Element> =
   document.getElementsByClassName('carousel-item');
-console.log(slides);
+console.log('轮播项数量:', slides.length);
 // 获取“下一个”按钮
 const nextButton: HTMLElement | null = document.getElementById(
   'carousel-button-next'
@@ -20,9 +22,11 @@ console.log('dots', dots);
 let position: number = 0;
 // 获取轮播项的总数
 const numberOfSlides: number = slides.length;
-let autoSlideInterval: number;
+
 // 隐藏所有轮播项的函数
 function hideAllSlides(): void {
+  console.log('隐藏所有轮播项');
+
   // 遍历所有轮播项
   for (const slide of Array.from(slides)) {
     // 移除“可见”类，隐藏当前轮播项
@@ -33,6 +37,7 @@ function hideAllSlides(): void {
 }
 // 处理切换到下一张轮播项的函数
 const handleMoveToNextSlide = (): void => {
+  console.log('切换到下一张');
   hideAllSlides();
   // 检查是否到达最后一张轮播项
   if (position === numberOfSlides - 1) {
@@ -48,6 +53,7 @@ const handleMoveToNextSlide = (): void => {
 
 // 处理切换到上一张轮播项的函数
 const handleMoveToPrevSlide = (): void => {
+  console.log('切换到一张');
   hideAllSlides();
 
   // 检查是否在第一张轮播项
@@ -89,12 +95,18 @@ const handleDotClick = (index: number) => (): void => {
 };
 // 启动自动切换定时器
 function startAutoSlide(): void {
-  autoSlideInterval = window.setInterval(handleMoveToNextSlide, 300); // 3 秒切换一次
+  console.log('启动自动切换定时器');
+  autoSlideInterval = window.setInterval(() => {
+    console.log('自动切换到下一张');
+    handleMoveToNextSlide();
+  }, 30); // 3 秒
 }
 // 重置自动切换定时器
 
 function resetAutoSlideTimer(): void {
   // 清除之前的定时器
+  console.log('重置自动切换定时器');
+
   clearInterval(autoSlideInterval);
   // 启动新的定时器
   startAutoSlide();
