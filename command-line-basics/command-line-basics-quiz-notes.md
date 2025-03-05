@@ -11,11 +11,9 @@ Answer the following questions in the provided markdown file before turning in t
 - Give at least one use case for each of the commands listed in this exercise.
 
   - `man`
-    history
   - `cat` **print the contents of .txt to your terminal.**
-    cat - concatenate files and print on the standard output
+    **cat - concatenate files and print on the standard output**
     SYNOPSIS
-    cat [OPTION]... [FILE]...
     DESCRIPTION
     Concatenate FILE(s) to standard output.
 
@@ -28,13 +26,10 @@ Answer the following questions in the provided markdown file before turning in t
                  number nonempty output lines, overrides -n
 
   - `ls`
-    NAME
     ls - **list directory contents**
 
 SYNOPSIS
 ls [OPTION]... [FILE]...
-
-DESCRIPTION
 **List information about the FILEs (the current directory by default). Sort en‐**
 tries alphabetically if none of -cftuvSUX nor --sort is specified.
 
@@ -50,13 +45,10 @@ tries alphabetically if none of -cftuvSUX nor --sort is specified.
               append indicator (one of */=>@|) to entries
 
 - `pwd`
-  NAME
   pwd - **print name of current/working directory**
+  **when need to print file path**
+  pwd [OPTION]...
 
-SYNOPSIS
-pwd [OPTION]...
-
-DESCRIPTION
 Print the full filename of the current working directory.
 
        -L, --logical
@@ -79,12 +71,11 @@ Print the full filename of the current working directory.
 - `echo`
   NAME
   **echo - display a line of text**
+  **print some text to the terminal**
+  SYNOPSIS
+  echo [SHORT-OPTION]... [STRING]...
+  echo LONG-OPTION
 
-SYNOPSIS
-echo [SHORT-OPTION]... [STRING]...
-echo LONG-OPTION
-
-DESCRIPTION
 Echo the STRING(s) to standard output.
 
        -n     do not output the trailing newline
@@ -105,9 +96,9 @@ Echo the STRING(s) to standard output.
 - `touch`
   NAME
   **touch - change file timestamps**
-  SYNOPSIS
+  **create empty file**
+
   touch [OPTION]... FILE...
-  DESCRIPTION
   Update the access and modification times of each FILE to the current time.
 
          A FILE argument that does not exist is created empty, unless -c or -h is supplied.
@@ -120,7 +111,7 @@ Echo the STRING(s) to standard output.
          -a     change only the access time
 
 - `mkdir`
-  NAME
+
   **mkdir - make directories**
 
 SYNOPSIS
@@ -142,29 +133,18 @@ Create the DIRECTORY(ies), if they do not already exist.
               to CTX
 
 - `mv`
-  NAME
-  mv - move (rename) files
+  **rename files**
 
 SYNOPSIS
 mv [OPTION]... [-T] SOURCE DEST
 mv [OPTION]... SOURCE... DIRECTORY
 mv [OPTION]... -t DIRECTORY SOURCE...
-
-DESCRIPTION
 **Rename SOURCE to DEST, or move SOURCE(s) to DIRECTORY.**
 
        Mandatory arguments to long options are mandatory for short options too.
 
-       --backup[=CONTROL]
-              make a backup of each existing destination file
-
-       -b     like --backup but does not accept an argument
-
-Manual page mv(1) line 1 (press h for help or q to quit)
-
 - `rm`
 
-NAME
 **rm - remove files or directories**
 
 SYNOPSIS
@@ -186,13 +166,7 @@ DESCRIPTION
 NAME
 **cp - copy files and directories**
 
-SYNOPSIS
-cp [OPTION]... [-T] SOURCE DEST
-cp [OPTION]... SOURCE... DIRECTORY
-cp [OPTION]... -t DIRECTORY SOURCE...
-
-DESCRIPTION
-Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
+**Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.**
 
        Mandatory arguments to long options are mandatory for short options too.
 
@@ -200,6 +174,11 @@ Copy SOURCE to DEST, or multiple SOURCE(s) to DIRECTORY.
               same as -dR --preserve=all
 
        --attributes-only
+
+**history - GNU History Library**
+**Many programs read input from the user a line at a time. The GNU History library is able to keep track of those lines, associate arbitrary data with each line, and utilize information from previous lines in composing new ones.**
+The history library supports a history expansion feature that is identical to the history expansion in bash. This section describes what syntax features are available.
+History expansions introduce words from the history list into the input stream, making it easy to repeat commands, insert the arguments to a previous command into the current input line, or fix errors in previous commands quickly.
 
 - What are the three virtues of a great programmer?
 
