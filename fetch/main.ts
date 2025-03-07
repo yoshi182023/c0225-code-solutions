@@ -13,7 +13,7 @@ interface User {
 
 // which waits for the promise returned by fetch to either resolve or reject.
 // This allows the function to wait for the HTTP request to complete before moving on to the next line of code.
-async function fetchUsers(): Promise<User[]> {
+async function fetchUsers(): Promise<void> {
   try {
     // Await Fetch Request: This section pauses the function's execution until the fetch request completes
     const response = await fetch('https://jsonplaceholder.typicode.com/users', {
@@ -33,15 +33,8 @@ async function fetchUsers(): Promise<User[]> {
     // it throws an error with the status code included in the error message.
     // This ensures that the function only proceeds with a valid response.
     const users: User[] = await response.json();
+
     console.log('user', users);
-    // JSON Parsing: Once the response is confirmed to be successful,
-    // this line parses the response body as JSON. The response.json() method also
-    // returns a promise, so await is used again to ensure that the data is fully parsed
-    // into a JavaScript object before any further processing. This step is crucial for handling
-    // the JSON data structure commonly used in APIs. Since Response.json() is declared to resolve to
-    // the type any, this line uses TypeScript type assertion to tell TypeScript what type the
-    // response actually contains.
-    return users;
   } catch (error) {
     console.error('Error:', error);
   }
@@ -54,28 +47,26 @@ interface Pokemon {
   weight: number;
 }
 
-async function fetchData(): Promise<Pokemon> {
+async function fetchData(): Promise<void> {
   try {
     // Initiate a fetch request and await its response
     const response = await fetch('https://pokeapi.co/api/v2/pokemon/1', {
       method: 'GET',
     });
     console.log('response', response);
-    if (!response.ok) {
-      throw new Error(`HTTP error! Status: ${response.status}`);
-    }
-    const data = await response.json();
-    console.log('all data', data);
-    const pokemon: Pokemon = {
-      name: data.name,
-      height: data.height,
-      weight: data.weight,
-    };
-    console.log('poke', pokemon);
-    return pokemon;
+    if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
+    const bulbas = (await response.json()) as Pokemon;
+
+    // const data = await response.json();
+    // console.log('all data', data);
+    // const pokemon: Pokemon = {
+    //   name: data.name,
+    //   height: data.height,
+    //   weight: data.weight,
+    // };
+    console.log('poke', bulbas);
   } catch (error) {
     console.error('Error:', error);
-    throw error;
   }
 }
 fetchData();
