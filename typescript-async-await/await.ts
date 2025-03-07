@@ -63,10 +63,14 @@ async function readChained(): Promise<void> {
 //   .then(() => readSeveral())
 //   .then(() => readChained());
 
-async function runAll(): Promise<void> {
-  await readOnce();
-  await readSeveral();
-  await readChained();
-}
+// async function runAll(): Promise<void> {
+//   await readOnce();
+//   await readSeveral();
+//   await readChained();
+// }
 
-runAll();
+// runAll();
+
+await readOnce();
+await readSeveral();
+await readChained();

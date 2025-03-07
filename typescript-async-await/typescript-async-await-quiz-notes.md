@@ -15,15 +15,23 @@ Answer the following questions in the provided markdown file before turning in t
   We use the await keyword to **pause execution until the Promise returned** is either fulfilled or rejected.
 
 When do you _not_ use `await`? (What happens if you `await` a synchronous function?)
+if it not asynchronous
+it has not effect
 
 - How do you handle errors with `await`?
+  **`try catch` block**
 
 - What do `try`, `catch` and `throw` do? When do you use them?
-  We can even use a try...catch block for **error handling**, exactly as we would if the code were synchronous.
-- What happens if you forget to use `await` on a Promise? In that case, what happens to the Promise rejection?
-  it will execute the next block of code without the data
+  attempt to execute code in the block
+  exception got thrown
+  then catch block will catch the exception
+  **anytime we use await keyword**
 
-  await forces asynchronous operations to be completed in series. This is necessary if the result of the **next operation depends on the result of the last one,** but if that's not the case then something like Promise.all() will be more performant.
+- What happens if you forget to use `await` on a Promise? In that case, what happens to the Promise rejection?
+
+access the promise in the pending stage
+it will execute the next block of code without the data
+await forces asynchronous operations to be completed in series. This is necessary if the result of the **next operation depends on the result of the last one,** but if that's not the case then something like Promise.all() will be more performant.
 
 - Which style of asynchronous programming do you prefer — callbacks, `Promise.then`, or `async/await`? Why?
 
