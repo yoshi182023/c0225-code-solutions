@@ -1,4 +1,4 @@
-export default function MidTextSection() {
+export function MidTextSection() {
   return (
     <section>
       <p>
