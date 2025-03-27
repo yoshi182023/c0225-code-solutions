@@ -18,9 +18,11 @@ export function App() {
   const [pokedex, setPokedex] = useState(initialPokedex);
 
   function handleAdd(toAdd: Pokemon): void {
+    // setPokedex([...pokedex, toAdd]); ❌
+    // setPokedex([{ ...pokedex, toAdd }]; ❌
     setPokedex([...pokedex, toAdd]);
   }
-  //why not ...initalpokedex
+  //why not ...initalpokedex❓
   function handleUpdate(toUpdate: Pokemon): void {
     setPokedex(
       pokedex.map((pokemon) =>
