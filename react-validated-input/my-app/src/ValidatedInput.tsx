@@ -22,9 +22,15 @@ export default function ValidatedInput() {
   // const span = getSpan();
   // const validationMessage = getValidationMessage();
   return (
-    <div>
-      <h3>Password:</h3>
-      <input type="password" value={password} onChange={handleChange} />
+    <div className="absolute inset-y-0 right-2 flex items-center">
+      <span className="text-gray-700"> Password :</span>
+      <input
+        className="w-full py-1 pl-2 pr-8 border border-gray-200 rounded"
+        type="password"
+        value={password}
+        onChange={handleChange}
+      />
+
       {getSpan()}
       {/* span */}
       <div>
