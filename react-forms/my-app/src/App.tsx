@@ -1,12 +1,14 @@
 import './App.css';
 import RegistrationFormUncontrolled from './RegistrationFormUncontrolled';
 import RegistrationFormControlled from './RegistrationFormControlled';
+// import EditForm from './EditForm';
 
 function App() {
   return (
     <>
+      <p>Uncontrolled</p>
       <RegistrationFormUncontrolled />
-      <p>next</p>
+      <p>Controlled</p>
       <RegistrationFormControlled />
     </>
   );

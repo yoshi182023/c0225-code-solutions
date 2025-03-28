@@ -6,7 +6,10 @@ Answer the following questions in the provided markdown file before turning in t
 
 - How do controlled components differ from uncontrolled components?
   **A component is "controlled" if the component that renders the component manages its state** usually in a useState variable?
-  **A component is "uncontrolled" if it manages its own state.**
+  A controlled is manage by react
+
+  **A component is "uncontrolled" if it manages its own state.** managed by DOM
+
 - What are some advantages of using uncontrolled components?
   an uncontrolled input component's value is managed by the DOM, not by React or by the programmer.
   The component's value can be retrieved from the HTMLFormElement when the form is submitte
@@ -21,7 +24,7 @@ Answer the following questions in the provided markdown file before turning in t
 - Which style do you prefer?
   controlled
 - What two props must you pass to an input for it to be "controlled"?
-  event handler prop and value prop
+  event handler/ onChange prop and value prop
 - What are some popular npm packages for creating forms in React?
   The 3 most popular packages are React Hook Form, Formik, and React Final Form
 
