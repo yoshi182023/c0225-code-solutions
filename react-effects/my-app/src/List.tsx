@@ -16,7 +16,7 @@ export function List() {
     const fetchItems = async () => {
       try {
         setIsLoading(true);
-        const data = await readItems(); // Assuming readItems is an async function
+        const data = await readItems();
         setItems(data);
       } catch (err) {
         setError(err);
@@ -33,7 +33,7 @@ export function List() {
   }
 
   if (error) {
-    setError(error);
+    // setError(error); 错误
     return (
       <div>
         Error! {error instanceof Error ? error.message : 'Unknown Error'}
