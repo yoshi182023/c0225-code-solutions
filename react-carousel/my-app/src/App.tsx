@@ -1,5 +1,5 @@
 import './App.css';
-import { RotatingBanner } from './RotatingBanner';
+import { Carousel } from './Carousel';
 
 export type Image = {
   src: string;
@@ -35,7 +35,7 @@ function App() {
 
   return (
     <>
-      <RotatingBanner images={images} />
+      <Carousel images={images} />
     </>
   );
 }
