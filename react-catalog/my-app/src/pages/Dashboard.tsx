@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Product, readCatalog } from '../lib/read';
 import { useNavigate } from 'react-router-dom';
-
+import { toDollars } from '../lib';
+// import { ProductCard } from './ProductCard';
 export function Dashboard() {
   const [items, setItems] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -19,6 +20,7 @@ export function Dashboard() {
         setIsLoading(false);
       }
     }
+    setIsLoading(true); // fast
     loadItems();
   }, []);
 
@@ -36,7 +38,7 @@ export function Dashboard() {
 
   return (
     <div className="container">
-      <h1>Dashboard</h1>
+      <h1>Catalog</h1>
       <hr className="py-1" />
       <div className="flex flex-wrap">
         {items?.map((item) => (
@@ -44,8 +46,8 @@ export function Dashboard() {
             key={item.productId}
             className="w-full md:w-1/2 lg:w-1/3 pr-4 pl-4">
             <ItemCard
-              item={item}
-              onClick={() => navigate(`/details/${item.productId}`)} // onDetails
+              item={item} // pass in individual product
+              onClick={() => navigate(`/details/${item.productId}`)}
             />
             {/* pass in as a id as our url */}
             {/* doesnt run sometime in the future , keep a reference in the backpack */}
@@ -65,8 +67,15 @@ function ItemCard({ item, onClick }: CardProps) {
     <div
       onClick={onClick}
       className="block cursor-pointer text-gray-900 rounded border border-gray-300 mb-4">
+      <img
+        className="object-contain h-72 w-fu''"
+        src={item.imageUrl}
+        alt={item.name}
+      />
       <div className="flex-auto p-6">
         <h5 className="font-bold mb-3">{item.name}</h5>
+        <p className="mb-0"> {toDollars(item.price)}</p>
+        <p className="mb-0"> {item.shortDescription}</p>
       </div>
     </div>
   );
