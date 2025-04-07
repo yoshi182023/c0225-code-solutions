@@ -48,12 +48,12 @@ function App() {
       {/* <dialog ref={modal}>
         {/* assgin the variable, modal will be used as our reference */}
       {/* useeffet run when the components get mounted  */}
-      <Modal isOpen={isOpen} />
-      <p>Are you sure you want to delete this?</p>
-      <button onClick={handleClose}>Cancel</button>
-      <button onClick={handleDelete}>Delete</button>
-      {/* </dialog> */}
-      <Modal />
+      <Modal isOpen={isOpen} onClose={handleClose}>
+        <p>Are you sure you want to delete this?</p>
+        <button onClick={handleClose}>Cancel</button>
+        <button onClick={handleDelete}>Delete</button>
+        {/* </dialog> */}
+      </Modal>
     </>
   );
 }
