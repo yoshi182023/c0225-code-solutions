@@ -5,7 +5,6 @@ export type Node<T> = {
 
 export class PriorityQueue<T = unknown> {
   nodes: Node<T>[] = [];
-
   /**
    * Adds a value to the queue with given priority.
    * Higher priority values are dequeued first.
@@ -16,7 +15,6 @@ export class PriorityQueue<T = unknown> {
 
     // Find the index of the first node with lower priority
     const index = this.nodes.findIndex((node) => node.priority < priority);
-
     // Inserting elements using JavaScript Array splice() method、
     // arrayName.splice(position, 0 ,new_element_1,new_element_2,...);
     // Shift elements to make space and insert the new node
