@@ -7,14 +7,16 @@ Answer the following questions in the provided markdown file before turning in t
 - Briefly describe the Binary Search Tree data structure.
   Search-tree property: for each node k (k is the key):all nodes in k’s left subtree are < k
   • all nodes in k’s right subtree are >= k
+
 - What are some examples of when you would use a Binary Search Tree?
-  balance data.
+  **trying to make data in order**
+
 - How do you determine if an element is in a Binary Search Tree? What is its time complexity?
-  O(logn)
+  **O(logn)**
 - How do you add an element into a Binary Search Tree? What is its time complexity?
-  O(1)
+  O(logn)
 - How do you remove an element from a Binary Search Tree? What is its time complexity?
-  a search partway down the tree for the item, O(1)
+  a search partway down the tree for the item, O(logn)
 
 ## Notes
 
