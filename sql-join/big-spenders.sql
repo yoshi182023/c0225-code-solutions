@@ -3,9 +3,9 @@ SELECT
     c."firstName" as customer_first_name,
     c."lastName" as customer_last_name
 FROM
-    payments p
+    payments as p
 JOIN
-    customers c ON p."customerId" = c."customerId"
+    customers as c ON using ("customerId")
 ORDER BY
     p.amount DESC
 LIMIT 10;

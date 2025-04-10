@@ -1,6 +1,6 @@
 SELECT
     actors."firstName" AS first_name,
-    actors."lastName" AS last_name
+    actors."lastName" as last_name
 FROM
     "actors"
 JOIN
