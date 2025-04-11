@@ -1,5 +1,5 @@
 {
-  "name": "code-solutions",
+  "name": "c0225-code-solutions",
   "version": "1.0.0",
   "private": true,
   "description": "Code exercise solutions.",
@@ -8,6 +8,8 @@
   },
   "devDependencies": {
     "@learningfuze/lfz-config": "^1.0.0",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.0",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
     "@typescript-eslint/parser": "^6.7.5",
     "eslint": "^8.38.0",
@@ -27,5 +29,13 @@
     "stylelint-config-recommended": "^11.0.0",
     "stylelint-config-standard": "^32.0.0",
     "typescript": "^5.2.2"
+  },
+  "type": "module",
+  "main": "server.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
   }
 }
