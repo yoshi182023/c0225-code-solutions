@@ -1,0 +1,9 @@
+total 72
+drwxr-xr-x  3 dev dev  4096 Apr 14 17:32 .
+drwxr-xr-x 46 dev dev  4096 Apr 11 22:12 ..
+-rw-r--r--  1 dev dev  1482 Apr 14 17:00 express-routes-quiz-notes.md
+drwxr-xr-x 61 dev dev  4096 Apr 14 16:04 node_modules
+-rw-r--r--  1 dev dev   374 Apr 14 16:28 package.json
+-rw-r--r--  1 dev dev 48263 Apr 14 16:28 package-lock.json
+-rw-r--r--  1 dev dev  1012 Apr 14 17:29 server.ts
+-rw-r--r--  1 dev dev     0 Apr 14 17:32 terminal_output.txt
