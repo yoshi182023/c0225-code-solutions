@@ -1,26 +1,27 @@
 import express from 'express';
 
 const app = express();
-
+// app.use mount a middleware
 app.use((req, res, next) => {
   // console.log('Hello, World!');
   // console.log('The date is', new Date());
   const currentDate = new Date().toISOString(); // ISO format (e.g., "2025-04-15T12:34:56.789Z")
   console.log(`[${currentDate}] ${req.method} ${req.path}`);
-  next(); // Pass control to the next middleware
+  next(); // Pass control to the next middleware, which is "Get" /
 });
 
-// Route handlers
+// get method, Route handlers(req, res, next)
 app.get('/', (req, res) => {
-  res.send('Welcome to the homepage!');
+  res.send(' homepage!'); // send a response
 });
 
-app.get('/notes', (req, res) => {
-  res.send('Here are your notes.');
+app.get('/notes', (_req, res) => {
+  res.send('Got notes.');
 });
 
 app.post('/notes/:noteId', (req, res) => {
-  const noteId = req.params.noteId; // Extract noteId from URL
+  const { noteId } = req.params; // Extract noteId from URL
+  // Return the value in your response.
   res.send(`Note ID received: ${noteId}`);
 });
 
