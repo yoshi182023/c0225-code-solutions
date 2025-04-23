@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html-forms</title>
+  </head>
+  <body>
+    <h1>Coding Form!</h1>
+    <div>
+      <!-- for "attribute  has to match the "id or has to be inside the label,if you are work with a form, you have to put the id -->
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+    <div>
+      <label for="why-coding" id="why-coding">Why Coding?</label>
+    </div>
+    <div>
+      <select id="country" name="country">
+        <option value="">Select an option</option>
+        <option value="Cool">Because it's cool</option>
+        <option value="fun">Because it's fun</option>
+        <option value="fun">Because it's useful</option>
+      </select>
+    </div>
+    <div>
+      <fieldset>
+        <div>
+          <label for="comments">Favorite Language (choose one):</label>
+        </div>
+
+        <label>
+          <input type="radio" name="favoriteLanguage" value="HTML" />
+          HTML</label
+        >
+        <label
+          ><input type="radio" name="favoriteLanguage" value="CSS" /> CSS</label
+        >
+        <label
+          ><input type="radio" name="favoriteLanguage" value="Javascript" />
+          Javascript</label
+        >
+      </fieldset>
+    </div>
+
+    <div>
+      <label>Sign up for more information?</label>
+    </div>
+
+    <div>
+      <label>
+        <input type="checkbox" name="interest" value="updates" /> Sign me up!
+      </label>
+    </div>
+
+    <form action="https://example.com/register" method="post">
+      <div><label for="comments">Comments:</label></div>
+
+      <textarea id="comments" name="comments" cols="80"></textarea>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
