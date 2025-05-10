@@ -1,0 +1,34 @@
+.container {
+  margin: 0 auto;
+  padding: 9rem;
+}
+
+.column-full {
+  width: 100 %;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.column img {
+  max-width: 100%;
+  height: auto;
+}
+
+.column {
+  flex: 1;
+}
+
+.column-text {
+  flex: 3;
+  text-align: left;
+}
+
+.column-image {
+  flex: 1;
+}
