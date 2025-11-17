@@ -1,0 +1,12 @@
+const cool = {
+    chilll:1,
+    hot:3
+}
+//console.log(cool.str) undefined
+
+//console.log(cool[str]);
+// ERROR!
+// /tmp/Kss6zHPaBL/main.js:8 ReferenceError: str is not defined
+
+console.log(cool.str.arr);
+//TypeError: Cannot read properties of undefined (reading 'arr')
