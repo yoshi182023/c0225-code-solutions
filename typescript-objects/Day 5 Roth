@@ -10,3 +10,24 @@ const cool = {
 
 console.log(cool.str.arr);
 //TypeError: Cannot read properties of undefined (reading 'arr')
+
+const people = [{
+  firstName: 'amy',
+  lastName: 'Doe',
+  age: 25,
+  friends:[1,2,3]
+},{
+  firstName: 'an',
+  lastName: 'Doe',
+  age: 25,
+  friends:null
+},{
+  firstName: 'mia',
+  lastName: 'Doe',
+  age: 25,
+}]
+
+for (const person of people){
+    console.log(person?.friends?.[0])
+}
+//if this is undefined or null we gonna stop there 
